@@ -9,6 +9,59 @@
     <!-- CSS Personalizado -->
     <link rel="stylesheet" href="style.css">
 </head>
+
+<!-- Cabeçalho Principal -->
+    <header class="sticky-top shadow-sm">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+            <div class="container">
+                <!-- Logotipo + Nome da Loja -->
+                <a class="navbar-brand d-flex align-items-center gap-2 fw-bold fs-4 logo-loja" href="#" id="logo-home">
+                    <div class="logo-icone d-flex align-items-center justify-content-center rounded-3 bg-primary text-white">
+                        <!-- Ícone SVG de Sacola de Compras -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+                            <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1m3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1z"/>
+                        </svg>
+                    </div>
+                    <span>Lojinha <span class="text-primary">Virtual</span></span>
+                </a>
+
+                <!-- Botão Hambúrguer para Celular -->
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Conteúdo Colapsável (Busca e Ações) -->
+                <div class="collapse navbar-collapse mt-3 mt-lg-0" id="menuPrincipal">
+                    <!-- Barra de Busca Centralizada -->
+                    <div class="mx-lg-auto my-2 my-lg-0 w-100 barra-busca-header">
+                        <div class="input-group">
+                            <input type="text" id="campo-busca" class="form-control border-0" placeholder="O que você procura hoje? (ex: phone, watch...)">
+                            <button id="btn-buscar" class="btn btn-primary px-3 fw-semibold" type="button">
+                                Buscar
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Botões da Direita -->
+                    <div class="d-flex align-items-center gap-2 mt-2 mt-lg-0">
+                        <button id="btn-recarregar" class="btn btn-outline-light btn-sm" title="Voltar ao início">
+                            Início
+                        </button>
+                        <button class="btn btn-primary btn-sm position-relative px-3" type="button" onclick="alert('Carrinho em desenvolvimento!')">
+                            Carrinho
+                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                0
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+
 <body class="bg-light">
 
     <!-- Navbar -->

@@ -89,3 +89,14 @@ btnRecarregar.addEventListener('click', () => {
 
 // Carrega os produtos assim que a página abre
 carregarProdutos();
+
+
+
+// ###################################################################
+
+
+document.getElementById('logo-home').addEventListener('click', (e) => {
+    e.preventDefault();
+    campoBusca.value = '';
+    carregarProdutos();
+});

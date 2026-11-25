@@ -1,3 +1,27 @@
+
+/* Estilos do Cabeçalho e Logotipo */
+.logo-icone {
+    width: 38px;
+    height: 38px;
+    transition: transform 0.2s ease;
+}
+
+.logo-loja:hover .logo-icone {
+    transform: rotate(-6deg) scale(1.05);
+}
+
+@media (min-width: 992px) {
+    .barra-busca-header {
+        max-width: 450px;
+    }
+}
+
+
+
+/* ############################################################################################ */
+
+
+
 .card-produto {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
