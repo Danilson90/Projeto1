@@ -47,12 +47,12 @@
                         <button id="btn-recarregar" class="btn btn-outline-light btn-sm" title="Voltar ao início">
                             Início
                         </button>
-                        <button class="btn btn-primary btn-sm position-relative px-3" type="button" onclick="alert('Carrinho em desenvolvimento!')">
-                            Carrinho
-                            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                0
-                            </span>
-                        </button>
+                        <button class="btn btn-primary btn-sm position-relative px-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCarrinho">
+    Carrinho
+    <span id="contador-carrinho" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        0
+    </span>
+</button>
                     </div>
                 </div>
             </div>
@@ -106,6 +106,66 @@
     <!-- JavaScript Personalizado -->
     <script src="script.js"></script>
     
+
+<!-- Gaveta Lateral do Carrinho -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCarrinho">
+        <div class="offcanvas-header bg-dark text-white">
+            <h5 class="offcanvas-title fw-bold">Carrinho de Compras</h5>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+        </div>
+
+        <div class="offcanvas-body d-flex flex-column">
+            <!-- Lista de produtos do carrinho -->
+            <div id="itens-carrinho" class="flex-grow-1 overflow-auto"></div>
+
+            <!-- Rodapé do Carrinho -->
+            <div class="border-top pt-3 mt-3">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fs-5">Total:</span>
+                    <span id="total-carrinho" class="fs-4 fw-bold text-success">$ 0.00</span>
+                </div>
+                <div class="d-grid gap-2">
+                    <button id="btn-pagar-pix" class="btn btn-success fw-semibold" disabled>
+                        Pagar com Pix
+                    </button>
+                    <button id="btn-limpar-carrinho" class="btn btn-outline-danger btn-sm" disabled>
+                        Esvaziar Carrinho
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal de Pagamento Pix -->
+    <div class="modal fade" id="modalPix" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title fw-bold">Pagamento via Pix</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="text-muted small mb-2">Escaneie o QR Code abaixo no app do seu banco:</p>
+                    
+                    <!-- Imagem gerada pela API de QR Code -->
+                    <img id="pix-qrcode" src="" alt="QR Code Pix" class="img-fluid border rounded p-2 mb-3" style="width: 210px; height: 210px;">
+                    
+                    <h4 id="pix-valor" class="fw-bold text-success mb-3">$ 0.00</h4>
+
+                    <label class="form-label small text-muted fw-semibold">Pix Copia e Cola:</label>
+                    <div class="input-group input-group-sm mb-3">
+                        <input type="text" id="pix-copia-cola" class="form-control bg-light" readonly>
+                        <button id="btn-copiar-pix" class="btn btn-outline-primary" type="button">Copiar</button>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary btn-sm" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" id="btn-confirmar-pix" class="btn btn-success fw-semibold">Já fiz o pagamento</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 <footer class="bg-dark text-white mt-5 py-4">
     <div class="container">
         <div class="row g-4">
