@@ -61,6 +61,48 @@
 
     <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
     <main class="container my-4 flex-grow-1">
+
+<!-- ==================== CARROSSEL DE CAPAS ==================== -->
+<div id="carrosselDestaques" class="carousel slide carousel-fade shadow-sm" data-bs-ride="carousel" data-bs-interval="4000">
+
+    <!-- Indicadores -->
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carrosselDestaques" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <!-- Imagens -->
+    <div class="carousel-inner">
+
+        <div class="carousel-item active">
+            <img src="capa-1.jpg" class="d-block w-100 imagem-carrossel" alt="Destaque da loja 1">
+        </div>
+
+        <div class="carousel-item">
+            <img src="capa-2.jpg" class="d-block w-100 imagem-carrossel" alt="Destaque da loja 2">
+        </div>
+
+        <div class="carousel-item">
+            <img src="capa-3.jpg" class="d-block w-100 imagem-carrossel" alt="Destaque da loja 3">
+        </div>
+
+    </div>
+
+    <!-- Botão anterior -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+    </button>
+
+    <!-- Botão próximo -->
+    <button class="carousel-control-next" type="button" data-bs-target="#carrosselDestaques" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+    </button>
+
+</div>
+
         <!-- Título e Filtro Rápido -->
         <div class="d-flex flex-wrap justify-content-between align-items-center gap-2 mb-4">
             <h1 class="h4 fw-bold mb-0 text-dark">Destaques da Loja</h1>
