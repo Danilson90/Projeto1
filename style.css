@@ -1,5 +1,6 @@
-
-/* Estilos do Cabeçalho e Logotipo */
+/* =========================================
+   1. CABEÇALHO E LOGOTIPO
+   ========================================= */
 .logo-icone {
     width: 38px;
     height: 38px;
@@ -10,18 +11,16 @@
     transform: rotate(-6deg) scale(1.05);
 }
 
+/* Limita a largura da barra de pesquisa em ecrãs grandes */
 @media (min-width: 992px) {
     .barra-busca-header {
         max-width: 450px;
     }
 }
 
-
-
-/* ############################################################################################ */
-
-
-
+/* =========================================
+   2. CARDS DE PRODUTOS
+   ========================================= */
 .card-produto {
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
@@ -39,6 +38,7 @@
     border-bottom: 1px solid #f0f0f0;
 }
 
+/* Corta a descrição após 2 linhas com reticências (...) */
 .descricao-curta {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -46,23 +46,35 @@
     overflow: hidden;
 }
 
-/* ############################################################################################ */
-
-
-/* Estilos do Carrinho Simples */
+/* =========================================
+   3. CARRINHO E MODAL PIX
+   ========================================= */
 .img-carrinho {
-    width: 50px;
-    height: 50px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
-    background: #fff;
+    background: #ffffff;
     border: 1px solid #dee2e6;
     border-radius: 6px;
-    padding: 3px;
+    padding: 4px;
 }
 
 .btn-qtd {
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
     padding: 0;
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qr-pix {
+    width: 210px;
+    height: 210px;
+}
+
+/* Efeito hover nos links do rodapé */
+.link-footer:hover {
+    color: #ffffff !important;
 }
